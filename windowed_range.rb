@@ -1,3 +1,4 @@
+require 'MinMaxStackQueue'
 def naive_window_max_range(arr, w)
   current_max_range = 0
   arr.each_index do |i|
