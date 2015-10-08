@@ -14,7 +14,6 @@ def first_anagram?(string)
     poss_ends = first_anagram(shorter_string)
 
     result << poss_ends.map{ |el| first_letter + el }
-    # result.map { |el| first_letter + el }
   end
 
 
@@ -44,20 +43,20 @@ end
 # p third_anagram("green", "greene") # => false
 # p third_anagram("happens", "happen") # => false
 
-# def fourth_anagram(str1, str2)
-#   count1 = Hash.new(0)
-#   count2 = Hash.new(0)
-#   str1.each_char do |char|
-#     count1[char] += 1
-#   end
-#   str2.each_char do |char|
-#     count2[char] += 1
-#   end
-#   count1 == count2
-#
-# end
+def fourth_anagram_i(str1, str2)
+  count1 = Hash.new(0)
+  count2 = Hash.new(0)
+  str1.each_char do |char|
+    count1[char] += 1
+  end
+  str2.each_char do |char|
+    count2[char] += 1
+  end
+  count1 == count2
 
-def fourth_anagram(str1, str2)
+end
+
+def fourth_anagram_ii(str1, str2)
   count = Hash.new(0)
 
   str1.each_char do |char|
